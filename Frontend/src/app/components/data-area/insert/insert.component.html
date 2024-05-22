@@ -1,0 +1,23 @@
+<div>
+    <form (submit)="send()" ngNativeValidate>
+        <label>Select Event Category:</label>
+        <select name="categoryId" [(ngModel)]="event.categoryId" required>
+            <option disabled selected>Select Event Category:</option>
+            <option *ngFor="let c of categories" [value]="c._id">{{c.categoryName}}</option>
+        </select>
+
+        <label>Event Date:</label>
+        <input type="datetime-local" name="eventDate" [(ngModel)]="event.eventDate" required>
+    
+        <label>Description:</label>
+        <input type="text" name="description" [(ngModel)]="event.description" required minlength="2" maxlength="100">
+
+        <label>Address:</label>
+        <input type="text" name="address" [(ngModel)]="event.address" required minlength="2" maxlength="100">
+
+        <label>Guests Number:</label>
+        <input type="number" name="guestsNumber" [(ngModel)]="event.guestsNumber" required min="5" max="1000">
+
+        <button>Add</button>
+    </form>
+</div>

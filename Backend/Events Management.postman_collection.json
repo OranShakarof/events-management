@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "73390526-1fbd-4d74-a279-6c87b518f68c",
+		"name": "Events Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28624935"
+	},
+	"item": [
+		{
+			"name": "Get All Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Events By Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/events-by-category/6513c9621035aeb697af0670",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"events-by-category",
+						"6513c9621035aeb697af0670"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Events By Category Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/events/6513d3f2f3975ea6420805cd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"events",
+						"6513d3f2f3975ea6420805cd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Events By Category Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"categoryId\": \"6513c9621035aeb697af0670\",\r\n    \"eventDate\": \"31/12/2023 23:30:00\",\r\n    \"description\": \"Silvester Party\",\r\n    \"address\": \"Sumsum street\",\r\n    \"guestsNumber\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"events"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,23 @@
+<div>
+    <select (change)="getEvents($event)">
+        <option disabled selected>Select Event Category</option>
+        <option *ngFor="let c of categories" [value]="c._id">{{c.categoryName}}</option>
+    </select>
+    <br>
+    <div *ngFor="let e of events" class="card">
+        <span>Date: {{e.eventDate | date:'dd-MM-yyyy HH:mm'}} </span>
+        <br/>
+        <span>Description: {{e.description}} </span>
+        <br/>
+        <span>Address: {{e.address}} </span>
+        <br/>
+        <span>Number Of Guests: {{e.guestsNumber}} </span>
+        <br/>
+        <span>
+            Event Status: {{ isEventPassed(e.eventDate) ? 'Event Passed' : 'Coming Soon' }}
+        </span>
+        <br/>
+        <button (click)="deleteMe(e._id)">🗑️</button> 
+    </div>
+
+</div>

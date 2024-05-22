@@ -1,0 +1,40 @@
+# Compiled output
+/dist
+/tmp
+/out-tsc
+
+# Dependency directories
+/node_modules
+/bower_components
+
+# IDEs and editors
+/.idea
+/.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Angular specific
+.angular
+.angular/cache
+
+# Compiled files
+*.js
+*.js.map
+
+# Log files
+/logs
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment files
+/src/environments/environment*.ts
+
+# Generated files
+*.ngsummary.json
+*.ngfactory.ts
